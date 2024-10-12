@@ -1,5 +1,7 @@
+Fuente: https://fonts.google.com/noto/specimen/Noto+Sans?query=fle&preview.text=!Bienvenido%2Fa%20N%C3%BAmero%20I
 1. aquitectura limpia
 2. .env
+
 
 # modelo_para_ganar
 
