@@ -18,4 +18,8 @@ class AppColors {
   static Color eighth = const Color.fromARGB(255, 5, 37, 78);
   // Letra resaltada 1
   static Color ninth = const Color.fromARGB(255, 79, 144, 155);
+
+  //Botones
+  static Color tenth = const Color.fromARGB(255, 117, 145, 208);
+  static Color eleventh = const Color.fromARGB(255, 60, 96, 172);
 }

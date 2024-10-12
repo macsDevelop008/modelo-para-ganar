@@ -10,7 +10,6 @@ class LogInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //extendBodyBehindAppBar: true,
       body: SafeArea(
           // Base
           child: SizedBox(
@@ -26,14 +25,17 @@ class LogInScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(
                   horizontal: ResponsiveDimentions.width(context, 0.05)),
               child: //! Componentes de la pantalla
-                  Column(
+                  const Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   //! Vista - Logo, titulo y subtitulo
                   LogInInitialLogoTitleView(),
                   //! Vista - Inputs nombre usuario, contraseña y recuperar contraseña
                   LogInInputsUserView(),
-                  //! Vista - Terminos condiciones, botones, ayuda
+                  //! Vista - Terminos condiciones
+                  LogInTermsConditionsView(),
+                  //! Vista - Botones y ayuda
+                  LogInButtonsHelpView(),
                 ],
               ),
             ),

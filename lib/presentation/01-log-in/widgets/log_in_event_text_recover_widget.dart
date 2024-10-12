@@ -18,15 +18,15 @@ class LogInEventTextRecoverWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        event();
-      },
-      child: Container(
-        width: width,
-        height: height * 0.15,
-        alignment: Alignment.centerRight,
-        color: Colors.yellow.withOpacity(0),
+    return Container(
+      width: width,
+      height: height * 0.15,
+      alignment: Alignment.centerRight,
+      color: Colors.yellow.withOpacity(0),
+      child: GestureDetector(
+        onTap: () {
+          event();
+        },
         child: Text(
           text,
           style: TextStyle(
