@@ -1,20 +1,28 @@
 import 'dart:io' show Platform;
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:modelo_para_ganar/configuration/configuration.dart';
 import 'package:modelo_para_ganar/presentation/presentation.dart';
 
-class BaseInternalButtonNavigationBarView extends StatelessWidget {
+class BaseInternalButtonNavigationBarView extends ConsumerWidget {
   const BaseInternalButtonNavigationBarView({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    //Conocer Plataforma IOS o Android
+  Widget build(BuildContext context, WidgetRef ref) {
+    // Provider del estado de la app
+    final currentStateApp = ref.watch(riverpodAppStateProvider);
+
+    // Conocer Plataforma IOS o Android
     final bool isIos = Platform.isIOS;
 
     // Tamaños
     final height = ResponsiveDimentions.height(context, isIos ? 0.1 : 0.075);
     final width = ResponsiveDimentions.width(context, 0.96);
+
+    // Tamños de los tabs
+    final heightTab = height * (isIos ? 0.58 : 0.7);
+    final widthTab = width * 0.3;
 
     return Container(
       alignment: isIos ? Alignment.topCenter : Alignment.center,
@@ -29,36 +37,36 @@ class BaseInternalButtonNavigationBarView extends StatelessWidget {
         children: [
           //! Widget - Bonificacion
           BaseInternalBarNavigatorButtonWidget(
-            height: height * (isIos ? 0.58 : 0.7),
-            width: width * 0.3,
+            height: heightTab,
+            width: widthTab,
             icon: Icons.monetization_on_outlined,
             text: 'Bonificación',
             event: () {
-              print('Ir a bonificacion');
+              eventTab(context, AppState.bonus, currentStateApp, ref);
             },
-            isSelected: false,
+            isSelected: currentStateApp == AppState.bonus,
           ),
           //! Widget - Resumen
           BaseInternalBarNavigatorButtonWidget(
-            height: height * (isIos ? 0.58 : 0.7),
-            width: width * 0.3,
+            height: heightTab,
+            width: widthTab,
             icon: Icons.home_outlined,
             text: 'Resumen',
             event: () {
-              print('Ir a resumen');
+              eventTab(context, AppState.summary, currentStateApp, ref);
             },
-            isSelected: true,
+            isSelected: currentStateApp == AppState.summary,
           ),
           //! Widget - Autoejecucion
           BaseInternalBarNavigatorButtonWidget(
-            height: height * (isIos ? 0.58 : 0.7),
-            width: width * 0.3,
+            height: heightTab,
+            width: widthTab,
             icon: Icons.image_outlined,
             text: 'Autoejecución',
             event: () {
-              print('Ir a Autoejecución');
+              eventTab(context, AppState.selfExecuting, currentStateApp, ref);
             },
-            isSelected: false,
+            isSelected: currentStateApp == AppState.selfExecuting,
           ),
         ],
       ),

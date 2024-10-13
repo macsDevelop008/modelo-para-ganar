@@ -29,4 +29,8 @@ class AppColors {
 
   // Sombra muy fuerte
   static Color thirteenth = const Color.fromARGB(255, 0, 0, 0);
+
+  // Colores Slider
+  static Color fifteenth = const Color.fromARGB(255, 159, 234, 128);
+  static Color sixteenth = const Color.fromARGB(255, 111, 186, 27);
 }

@@ -27,7 +27,6 @@ final appRouter =
                   path: '/${SummaryTabSummayScreen.name}',
                   name: SummaryTabSummayScreen.name,
                   builder: (context, state) => const SummaryTabSummayScreen()),
-
               //! Autoejecucion
               //! Radiografía
             ]),

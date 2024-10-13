@@ -67,9 +67,10 @@ class SummayTabNavigationView extends StatelessWidget {
         boxShadow: [
           // Sombra externa
           BoxShadow(
-              color: AppColors.thirteenth.withOpacity(0.3),
-              blurRadius: width * 0.01,
-              spreadRadius: width * 0.001)
+              offset: const Offset(0, -1),
+              color: AppColors.thirteenth.withOpacity(0.5),
+              blurRadius: width * 0.00,
+              spreadRadius: width * 0.003)
         ]);
   }
 }

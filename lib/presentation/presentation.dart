@@ -1,4 +1,5 @@
 //! Global
+
 export 'package:modelo_para_ganar/presentation/global/views/global_backgrpund_color_view.dart';
 export 'package:modelo_para_ganar/presentation/global/widgets/global_circle_color_gradient_blur_widget.dart';
 export 'package:modelo_para_ganar/presentation/global/widgets/global_linear_color_gradient_widget.dart';
@@ -26,6 +27,7 @@ export 'package:modelo_para_ganar/presentation/02-base-internal/widgets/base_int
 export 'package:modelo_para_ganar/presentation/02-base-internal/widgets/base_internal_data_app_bar_widget.dart';
 export 'package:modelo_para_ganar/presentation/02-base-internal/views/base_internal_button_navigation_bar_view.dart';
 export 'package:modelo_para_ganar/presentation/02-base-internal/widgets/base_internal_bar_navigator_button_widget.dart';
+export 'package:modelo_para_ganar/presentation/02-base-internal/helpers/navigation_tab_event_helper.dart';
 
 //! 03-Summary
 export 'package:modelo_para_ganar/presentation/03-summary/screens/summary_base_screen.dart';
@@ -34,6 +36,10 @@ export 'package:modelo_para_ganar/presentation/03-summary/screens/summary_tab_su
 export 'package:modelo_para_ganar/presentation/03-summary/widgets/summary_advertising_image_widget.dart';
 export 'package:modelo_para_ganar/presentation/03-summary/views/summary_tab_navigation_view.dart';
 export 'package:modelo_para_ganar/presentation/03-summary/widgets/summary_tab_navigation_button_widget.dart';
+export 'package:modelo_para_ganar/presentation/03-summary/views/summary_tab_summary_title_sub_title_view.dart';
+export 'package:modelo_para_ganar/presentation/03-summary/widgets/summary_tab_summary_text_widget.dart';
+export 'package:modelo_para_ganar/presentation/03-summary/views/summary_tab_summary_slider_view.dart';
+export 'package:modelo_para_ganar/presentation/03-summary/widgets/summary_tab_summary_slider_widget.dart';
 
 //! 04-Bonus
 export 'package:modelo_para_ganar/presentation/04-bonus/screen/bonus_screen.dart';
