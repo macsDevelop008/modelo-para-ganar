@@ -21,10 +21,11 @@ class AppColors {
 
   // Botones
   static Color tenth = const Color.fromARGB(255, 117, 145, 208);
-  static Color eleventh = const Color.fromARGB(255, 60, 96, 172);
+  static Color eleventh = const Color.fromRGBO(60, 96, 172, 1);
 
-  // Decoracion boton app bar
+  // Decoracion boton app bar y navigaton bar
   static Color twelfth = const Color.fromARGB(255, 254, 194, 5);
+  static Color fourteenth = const Color.fromARGB(255, 249, 148, 28);
 
   // Sombra muy fuerte
   static Color thirteenth = const Color.fromARGB(255, 0, 0, 0);

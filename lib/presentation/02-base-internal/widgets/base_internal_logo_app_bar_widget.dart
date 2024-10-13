@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class HomeLogoAppBar extends StatelessWidget {
-  const HomeLogoAppBar(
+class BaseInternalLogoAppBar extends StatelessWidget {
+  const BaseInternalLogoAppBar(
       {super.key,
       required this.width,
       required this.height,

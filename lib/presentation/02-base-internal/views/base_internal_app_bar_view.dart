@@ -3,8 +3,8 @@ import 'package:modelo_para_ganar/configuration/configuration.dart';
 import 'package:modelo_para_ganar/domain/domain.dart';
 import 'package:modelo_para_ganar/presentation/presentation.dart';
 
-class HomeAppBarView extends StatelessWidget {
-  const HomeAppBarView({super.key});
+class BaseInternalAppBarView extends StatelessWidget {
+  const BaseInternalAppBarView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class HomeAppBarView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //! Widget - Botón opciones
-            HomeOptionsButtonAppBarWidget(
+            BaseInternalOptionsButtonAppBarWidget(
               width: width * 0.11,
               height: height * 0.6,
               event: () {
@@ -27,7 +27,7 @@ class HomeAppBarView extends StatelessWidget {
               },
             ),
             //! Widget - Info personal y droplist
-            HomeDataAppBarWidget(
+            BaseInternalDataAppBarWidget(
               height: height * 0.6,
               width: width * 0.61,
               data: HomeAppBarDataEntity(
@@ -44,7 +44,7 @@ class HomeAppBarView extends StatelessWidget {
               },
             ),
             //! Widget - Icono
-            HomeLogoAppBar(
+            BaseInternalLogoAppBar(
               width: width * 0.2,
               height: height * 0.6,
               pathAssetImg: 'assets/images/logo_home.png',

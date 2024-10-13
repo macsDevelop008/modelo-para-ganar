@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:modelo_para_ganar/configuration/configuration.dart';
 import 'package:modelo_para_ganar/domain/domain.dart';
 
-class HomeDataAppBarWidget extends StatelessWidget {
-  const HomeDataAppBarWidget(
+class BaseInternalDataAppBarWidget extends StatelessWidget {
+  const BaseInternalDataAppBarWidget(
       {super.key,
       required this.height,
       required this.width,

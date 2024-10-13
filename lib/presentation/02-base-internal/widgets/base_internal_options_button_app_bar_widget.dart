@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:modelo_para_ganar/configuration/configuration.dart';
 
-class HomeOptionsButtonAppBarWidget extends StatelessWidget {
-  const HomeOptionsButtonAppBarWidget(
+class BaseInternalOptionsButtonAppBarWidget extends StatelessWidget {
+  const BaseInternalOptionsButtonAppBarWidget(
       {super.key,
       required this.width,
       required this.height,
