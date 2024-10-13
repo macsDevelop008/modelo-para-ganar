@@ -19,7 +19,13 @@ class AppColors {
   // Letra resaltada 1
   static Color ninth = const Color.fromARGB(255, 79, 144, 155);
 
-  //Botones
+  // Botones
   static Color tenth = const Color.fromARGB(255, 117, 145, 208);
   static Color eleventh = const Color.fromARGB(255, 60, 96, 172);
+
+  // Decoracion boton app bar
+  static Color twelfth = const Color.fromARGB(255, 254, 194, 5);
+
+  // Sombra muy fuerte
+  static Color thirteenth = const Color.fromARGB(255, 0, 0, 0);
 }

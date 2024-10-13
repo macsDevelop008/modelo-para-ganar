@@ -21,3 +21,7 @@ export 'package:modelo_para_ganar/presentation/01-log-in/widgets/log_in_event_te
 
 //! 02-Home
 export 'package:modelo_para_ganar/presentation/02-home/screens/home_screen.dart';
+export 'package:modelo_para_ganar/presentation/02-home/views/home_app_bar_view.dart';
+export 'package:modelo_para_ganar/presentation/02-home/widgets/home_options_button_app_bar_widget.dart';
+export 'package:modelo_para_ganar/presentation/02-home/widgets/home_logo_app_bar_widget.dart';
+export 'package:modelo_para_ganar/presentation/02-home/widgets/home_data_app_bar_widget.dart';

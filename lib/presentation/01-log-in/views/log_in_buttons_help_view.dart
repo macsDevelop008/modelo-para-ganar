@@ -40,6 +40,7 @@ class LogInButtonsHelpView extends StatelessWidget {
                   event: () {
                     print('evento');
                   },
+                  textSize: height * 0.08,
                 ),
                 //! Espacio
                 SizedBox(
@@ -58,6 +59,7 @@ class LogInButtonsHelpView extends StatelessWidget {
                   event: () {
                     print('evento');
                   },
+                  textSize: height * 0.08,
                 ),
                 //! Widget - Texto button ayuda
                 LogInEventTextIconWidget(

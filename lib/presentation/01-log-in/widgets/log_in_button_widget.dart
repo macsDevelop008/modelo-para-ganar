@@ -12,7 +12,8 @@ class LogInButtonWidget extends StatelessWidget {
       required this.text,
       required this.textColor,
       this.borderColor,
-      required this.event});
+      required this.event,
+      required this.textSize});
 
   final double width;
   final double height;
@@ -21,6 +22,7 @@ class LogInButtonWidget extends StatelessWidget {
   final Color? borderColor;
   final Color shadowColor;
   final String text;
+  final double textSize;
   final Color textColor;
   final VoidCallback event;
 
@@ -75,7 +77,8 @@ class LogInButtonWidget extends StatelessWidget {
               style: TextStyle(
                   fontFamily: 'NotoSans',
                   fontWeight: FontWeight.w700,
-                  color: textColor),
+                  color: textColor,
+                  fontSize: textSize),
             ),
           ),
         ),
