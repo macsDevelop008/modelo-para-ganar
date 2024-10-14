@@ -56,7 +56,6 @@ class LogInButtonsHelpView extends StatelessWidget {
                     );
                   },
                 ),
-
                 //! Espacio
                 SizedBox(
                   height: height * 0.08,
@@ -79,7 +78,10 @@ class LogInButtonsHelpView extends StatelessWidget {
                 //! Widget - Texto button ayuda
                 LogInEventTextIconWidget(
                   event: () {
-                    print('ayuda whats');
+                    openWhatsApp(
+                        context,
+                        EnvironmentVariables.phoneNumberWpTest,
+                        '¡Hola! Quiero más información.');
                   },
                   width: width,
                   height: height * 0.3,

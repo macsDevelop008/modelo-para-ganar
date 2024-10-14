@@ -29,7 +29,7 @@ class HttpsServiceDioLogInHelper {
     // Transforma en mapa la data del response
     final data = jsonDecode(response.data) as Map;
 
-    // Imprime inormación
+    // Imprime información
     Logger().i(data);
 
     // Si es estado es 200

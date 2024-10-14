@@ -12,4 +12,7 @@ class EnvironmentVariables {
 
   static final String storageKeyToken = dotenv.get('STORAGE_KEY_TOKEN',
       fallback: 'not found enviroment-variable');
+
+  static final String phoneNumberWpTest =
+      dotenv.get('WP_NUMBER_TEST', fallback: 'not found enviroment-variable');
 }

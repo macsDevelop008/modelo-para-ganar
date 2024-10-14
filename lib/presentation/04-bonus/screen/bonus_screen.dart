@@ -21,7 +21,7 @@ class BonusScreen extends StatelessWidget {
           // Tamaños
           //final height = constraints.maxHeight;
           //final width = constraints.maxWidth;
-          return const Center(child: Text('bonus'));
+          return Container();
         },
       ),
     );

@@ -1,14 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:modelo_para_ganar/configuration/configuration.dart';
+import 'package:modelo_para_ganar/presentation/presentation.dart';
 
 class GlobalDrawerOptionsScreen extends StatelessWidget {
   const GlobalDrawerOptionsScreen({super.key});
+
+  /// Decoración del contenedor
+  BoxDecoration _decoration(double height) {
+    return BoxDecoration(
+        // Sombra
+        boxShadow: [
+          BoxShadow(
+              color: AppColors.thirteenth,
+              blurRadius: height * 0.01,
+              spreadRadius: height * 0.005)
+        ],
+        // Gradiente
+        gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [AppColors.fourth, AppColors.third, AppColors.fourth]));
+  }
 
   @override
   Widget build(BuildContext context) {
     // Tamaños
     final double height = ResponsiveDimentions.height(context, 1);
-    final double width = ResponsiveDimentions.width(context, .4);
+    final double width = ResponsiveDimentions.width(context, .5);
 
     return Container(
       height: height,
@@ -31,13 +49,31 @@ class GlobalDrawerOptionsScreen extends StatelessWidget {
           ),
           //! Espacio
           const Expanded(child: SizedBox()),
-          //! Boton cerrar sesión
+          //! Boton crear participante
           SizedBox(
               width: width * 0.8,
               child: ElevatedButton(
                   onPressed: () {
-                    print('Cerrar Sesión');
+                    showDialogCreateParticipant(context);
                   },
+                  child: Text(
+                    'Crear Participante',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontFamily: 'NotoSans',
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.third,
+                        fontSize: width * 0.08),
+                  ))),
+          //! Espacio
+          SizedBox(
+            height: height * 0.01,
+          ),
+          //! Boton cerrar sesión
+          SizedBox(
+              width: width * 0.8,
+              child: ElevatedButton(
+                  onPressed: () {},
                   child: Text(
                     'Cerrar Sesión',
                     textAlign: TextAlign.center,
@@ -45,7 +81,7 @@ class GlobalDrawerOptionsScreen extends StatelessWidget {
                         fontFamily: 'NotoSans',
                         fontWeight: FontWeight.w700,
                         color: AppColors.third,
-                        fontSize: width * 0.1),
+                        fontSize: width * 0.08),
                   ))), //! Espacio
           SizedBox(
             height: height * 0.02,
@@ -53,22 +89,5 @@ class GlobalDrawerOptionsScreen extends StatelessWidget {
         ],
       )),
     );
-  }
-
-  /// Decoración del contenedor
-  BoxDecoration _decoration(double height) {
-    return BoxDecoration(
-        // Sombra
-        boxShadow: [
-          BoxShadow(
-              color: AppColors.thirteenth,
-              blurRadius: height * 0.01,
-              spreadRadius: height * 0.005)
-        ],
-        // Gradiente
-        gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [AppColors.fourth, AppColors.third, AppColors.fourth]));
   }
 }

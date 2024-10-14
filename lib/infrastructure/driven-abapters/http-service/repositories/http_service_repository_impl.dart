@@ -9,4 +9,10 @@ class HttpServiceRepositoryImpl implements HttpServiceRepository {
   Future<(bool, String)> logIn(String user, String password) async {
     return await datasource.logIn(user, password);
   }
+
+  @override
+  Future<(bool, List<FormFieldParticipantEntity>?)> singupFormFields(
+      String apiKey, String compaing) async {
+    return await datasource.singupFormFields(apiKey, compaing);
+  }
 }

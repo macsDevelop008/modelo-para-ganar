@@ -1,10 +1,12 @@
 //! Global
 
+export 'package:modelo_para_ganar/presentation/global/helpers/global_show_create_participant_helper.dart';
 export 'package:modelo_para_ganar/presentation/global/helpers/global_show_modal_dialog_helper.dart';
 export 'package:modelo_para_ganar/presentation/global/screens/global_drawer_options_screen.dart';
 export 'package:modelo_para_ganar/presentation/global/views/global_backgrpund_color_view.dart';
 export 'package:modelo_para_ganar/presentation/global/widgets/global_circle_color_gradient_blur_widget.dart';
 export 'package:modelo_para_ganar/presentation/global/widgets/global_linear_color_gradient_widget.dart';
+export 'package:modelo_para_ganar/presentation/global/screens/global_create_participant_screen.dart';
 
 //! 01-LogIn
 export 'package:modelo_para_ganar/presentation/01-log-in/screens/log_in_screen.dart';
@@ -21,6 +23,7 @@ export 'package:modelo_para_ganar/presentation/01-log-in/views/log_in_buttons_he
 export 'package:modelo_para_ganar/presentation/01-log-in/widgets/log_in_button_widget.dart';
 export 'package:modelo_para_ganar/presentation/01-log-in/widgets/log_in_event_text_icon_widget.dart';
 export 'package:modelo_para_ganar/presentation/01-log-in/helpers/log_in_button_helper.dart';
+export 'package:modelo_para_ganar/presentation/01-log-in/helpers/help_registration_helper.dart';
 
 //! 02-Base Internal
 export 'package:modelo_para_ganar/presentation/02-base-internal/screens/base_internal_screen.dart';

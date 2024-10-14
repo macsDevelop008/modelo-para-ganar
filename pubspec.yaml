@@ -46,6 +46,7 @@ dependencies:
   dio: ^5.7.0                       # Http service
   logger: ^2.4.0                    # Mejora de prints
   shared_preferences: ^2.3.2        # Manejador del storage
+  url_launcher: ^6.3.1              # Abrir app externas
 
 
 dev_dependencies:
