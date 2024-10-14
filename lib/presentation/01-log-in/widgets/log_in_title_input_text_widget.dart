@@ -137,6 +137,7 @@ class _InputTextFieldState extends State<_InputTextField> {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: widget.width * 0.05),
       child: TextField(
+        controller: widget.controller,
         textAlign: TextAlign.left, // Eje x
         obscureText: stateIsObscureText, // Ocultar texto
         textAlignVertical: TextAlignVertical.center, // Alineamiento vertical

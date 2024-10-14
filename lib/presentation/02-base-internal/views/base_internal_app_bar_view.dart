@@ -23,7 +23,8 @@ class BaseInternalAppBarView extends StatelessWidget {
               width: width * 0.11,
               height: height * 0.6,
               event: () {
-                print('Opciones');
+                KeysDrawOptionsGlobal.scaffoldDrawOptionsKey.currentState
+                    ?.openDrawer();
               },
             ),
             //! Widget - Info personal y droplist

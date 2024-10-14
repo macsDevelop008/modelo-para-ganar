@@ -7,7 +7,14 @@ import 'package:modelo_para_ganar/presentation/presentation.dart';
 /// 2. Titulo e input text de la contraseña
 /// 3. Text Button para recuperar contraseña
 class LogInInputsUserView extends StatelessWidget {
-  const LogInInputsUserView({super.key});
+  const LogInInputsUserView(
+      {super.key,
+      required this.controllerTextUser,
+      required this.controllerTextPass});
+
+  // Controladores TextField usuario y contraseña
+  final TextEditingController controllerTextUser;
+  final TextEditingController controllerTextPass;
 
   @override
   Widget build(BuildContext context) {
@@ -23,13 +30,13 @@ class LogInInputsUserView extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          //! Widget - Input número usuario
+          //! Widget - Input usuario
           LogInTitleInputTextWidget(
             title: 'Número de usuario *',
             width: width * 0.85,
             height: height * 0.4,
             hintText: 'Número de usuario *',
-            controller: TextEditingController(),
+            controller: controllerTextUser,
             obscureText: false,
           ),
           //! Widget - Input contraseña
@@ -38,7 +45,7 @@ class LogInInputsUserView extends StatelessWidget {
             width: width * 0.85,
             height: height * 0.4,
             hintText: 'Contraseña *',
-            controller: TextEditingController(),
+            controller: controllerTextPass,
             obscureText: true,
           ),
           //! Widget - Recuperar contraseña
