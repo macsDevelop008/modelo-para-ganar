@@ -22,10 +22,24 @@ class SummaryTabSummarySliderView extends StatelessWidget {
       color: Colors.green.withOpacity(0.0),
       width: widthBase,
       height: heightBase,
-      child: SummaryTabSummarySliderWidget(
-        heightBar: heightBase * 0.4,
-        width: width * 0.1,
-        valueSlider: percentageValue,
+      child: Stack(
+        alignment: Alignment.centerLeft,
+        children: [
+          //! Slider personalizado
+          SummaryTabSummarySliderWidget(
+            heightBar: heightBase * 0.4,
+            width: widthBase * 0.85,
+            valueSlider: percentageValue,
+          ),
+          //! Esfera porcentaje final del slider
+          Positioned(
+            right: 0,
+            child: SummaryTabSummaryCircleTextWidget(
+              size: heightBase * 0.9,
+              valueSlider: percentageValue,
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -16,7 +16,7 @@ class SummaryTabSummayScreen extends StatelessWidget {
         final width = constraints.maxWidth;
 
         // Tamaños cuadrado redondeado
-        final heightRoundedSquare = height * 0.8;
+        final heightRoundedSquare = height * 0.85;
         final widthRoundedSquare = width * 0.95;
 
         return
@@ -57,9 +57,20 @@ class SummaryTabSummayScreen extends StatelessWidget {
                       SummaryTabSummarySliderView(
                           height: heightRoundedSquare,
                           width: widthRoundedSquare,
-                          percentageValue: 50.0),
+                          percentageValue: 30),
                       //! Filtro - dropDownList
+                      SummaryTabSummaryDropwdownListView(
+                        height: heightRoundedSquare * 0.08,
+                        width: widthRoundedSquare,
+                        data: {
+                          '1': 'Cartones 1',
+                          '2': 'Cartones 2',
+                          '3': 'Cartones 3'
+                        },
+                        event: (String? value) {},
+                      ),
                       //! Estadisticas - arcos y %
+                      SummaryTabSummaryCirclesSliderDataView(),
                     ],
                   ),
                 ));

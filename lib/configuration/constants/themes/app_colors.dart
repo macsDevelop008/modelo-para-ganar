@@ -33,4 +33,16 @@ class AppColors {
   // Colores Slider
   static Color fifteenth = const Color.fromARGB(255, 159, 234, 128);
   static Color sixteenth = const Color.fromARGB(255, 111, 186, 27);
+
+  // Colores Slider Circulares
+  static Color cirlceSlider1 = const Color.fromARGB(255, 63, 99, 177);
+  static Color cirlceSlider2 = const Color.fromARGB(255, 115, 197, 189);
+  static Color cirlceSlider3 = const Color.fromARGB(255, 250, 99, 93);
+  static Color cirlceSlider4 = const Color.fromARGB(255, 253, 171, 16);
+
+  // Colores Secundarios - Slider Circulares
+  static Color cirlceSliderS1 = const Color.fromARGB(255, 79, 123, 218);
+  static Color cirlceSliderS2 = const Color.fromARGB(255, 145, 247, 237);
+  static Color cirlceSliderS3 = const Color.fromARGB(255, 253, 125, 120);
+  static Color cirlceSliderS4 = const Color.fromARGB(255, 255, 188, 63);
 }
