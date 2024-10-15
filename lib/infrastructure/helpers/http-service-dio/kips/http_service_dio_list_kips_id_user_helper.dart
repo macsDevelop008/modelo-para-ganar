@@ -37,7 +37,7 @@ class HttpServiceDioListKipsIdUserHelper {
     final data = jsonDecode(response.data) as Map;
 
     // Imprime información
-    Logger().i(data);
+    //Logger().i(data);
 
     // Si es estado es 200
     if (response.statusCode == 200) {
