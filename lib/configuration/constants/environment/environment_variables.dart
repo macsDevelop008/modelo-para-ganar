@@ -15,4 +15,7 @@ class EnvironmentVariables {
 
   static final String phoneNumberWpTest =
       dotenv.get('WP_NUMBER_TEST', fallback: 'not found enviroment-variable');
+
+  static final String campaign =
+      dotenv.get('COMPAIGN', fallback: 'not found enviroment-variable');
 }

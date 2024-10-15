@@ -43,6 +43,7 @@ Future<void> showInformationModal(BuildContext context, String text) async {
     body: Center(
       child: Text(
         text,
+        textAlign: TextAlign.center,
         style: _textInformationStyle(textInfoSize),
       ),
     ),
@@ -64,6 +65,7 @@ Future<void> showWarningModal(BuildContext context, String text,
           body: Center(
             child: Text(
               text,
+              textAlign: TextAlign.center,
               style: _textInformationStyle(textInfoSize),
             ),
           ),
@@ -86,6 +88,7 @@ Future<void> showErrorModal(BuildContext context, String text,
           body: Center(
             child: Text(
               text,
+              textAlign: TextAlign.center,
               style: _textInformationStyle(textInfoSize),
             ),
           ),
@@ -108,6 +111,7 @@ Future<void> showGoodModal(BuildContext context, String text,
           body: Center(
             child: Text(
               text,
+              textAlign: TextAlign.center,
               style: _textInformationStyle(textInfoSize),
             ),
           ),

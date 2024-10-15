@@ -14,13 +14,12 @@ abstract class HttpServiceRepository {
   /// [return] bool = Si efectuó la lógica sin errores
   /// [return] List<FormFieldParticipantEntity> = Listado de data requerida para el registro
   /// del usuario
-  Future<(bool, List<FormFieldParticipantEntity>?)> singupFormFields(
-      String apiKey, String compaing);
+  Future<(bool, List<FormFieldParticipantEntity>?)> singupFormFields();
 
   //! Realizar la peti. de la creación de participante
-  /// [parameter]newParticipant, data del nuevo participante
+  /// [parameter]data, data del nuevo participante a registrar
   /// [return] bool = Si efectuó la lógica si errores
   /// [return] String = codigo de respuesta
-  /*Future<(bool, String)> createParticipant(
-      FormFieldParticipantEntity newParticipant);*/
+  Future<(bool, String)> createParticipant(
+      List<FormFieldParticipantEntity> data);
 }

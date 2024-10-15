@@ -45,7 +45,8 @@ class HttpsServiceDioSingupFormFieldsHelper {
       result.add(FormFieldParticipantEntity(
           typeValue: element['type_value'].toString(),
           name: element['name'],
-          isRequired: element['required_field']));
+          isRequired: element['required_field'],
+          label: element['label']));
     }
     return result;
   }

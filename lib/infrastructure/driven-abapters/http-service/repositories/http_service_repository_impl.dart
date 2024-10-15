@@ -11,8 +11,13 @@ class HttpServiceRepositoryImpl implements HttpServiceRepository {
   }
 
   @override
-  Future<(bool, List<FormFieldParticipantEntity>?)> singupFormFields(
-      String apiKey, String compaing) async {
-    return await datasource.singupFormFields(apiKey, compaing);
+  Future<(bool, List<FormFieldParticipantEntity>?)> singupFormFields() async {
+    return await datasource.singupFormFields();
+  }
+
+  @override
+  Future<(bool, String)> createParticipant(
+      List<FormFieldParticipantEntity> data) async {
+    return await datasource.createParticipant(data);
   }
 }
