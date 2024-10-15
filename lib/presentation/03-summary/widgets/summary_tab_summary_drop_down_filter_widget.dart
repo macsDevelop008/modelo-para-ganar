@@ -7,11 +7,13 @@ class SummaryTabSummaryDropDownWidget extends StatelessWidget {
       required this.height,
       required this.width,
       required this.data,
-      required this.event});
+      required this.event,
+      required this.initialValue});
 
   final double height;
   final double width;
   final Map<String, String> data;
+  final String initialValue;
   final Function(String?) event;
 
   @override
@@ -46,6 +48,7 @@ class SummaryTabSummaryDropDownWidget extends StatelessWidget {
               width: width * 0.28,
               data: data,
               event: event,
+              initialValue: initialValue,
             ),
           )
         ],
@@ -59,11 +62,13 @@ class _DropDownButtonFilter extends StatefulWidget {
       {required this.height,
       required this.width,
       required this.data,
-      required this.event});
+      required this.event,
+      required this.initialValue});
 
   final double height;
   final double width;
   final Map<String, String> data;
+  final String initialValue;
   final Function(String?) event;
 
   @override
@@ -73,6 +78,14 @@ class _DropDownButtonFilter extends StatefulWidget {
 class __DropDownButtonFilterState extends State<_DropDownButtonFilter> {
   // Valor seleccionado
   String? selectedValue;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Valor inicial al ejecutar la app
+    selectedValue = widget.initialValue;
+  }
 
   @override
   Widget build(BuildContext context) {

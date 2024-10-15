@@ -52,6 +52,8 @@ export 'package:modelo_para_ganar/presentation/03-summary/views/summary_tab_summ
 export 'package:modelo_para_ganar/presentation/03-summary/views/summary_tab_summary_circles_slider_data_view.dart';
 export 'package:modelo_para_ganar/presentation/03-summary/widgets/summary_tab_summary_circular_slider_percentage_widget.dart';
 export 'package:modelo_para_ganar/presentation/03-summary/helpers/summary-tab-summary/summary_tab_summary_list_kips_helper.dart';
+export 'package:modelo_para_ganar/presentation/03-summary/helpers/summary-tab-summary/summary_tab_summary_parse_data_kips_helper.dart';
+export 'package:modelo_para_ganar/presentation/03-summary/helpers/summary-tab-summary/summary_tab_summary_slider_values_helper.dart';
 
 //! 04-Bonus
 export 'package:modelo_para_ganar/presentation/04-bonus/screen/bonus_screen.dart';

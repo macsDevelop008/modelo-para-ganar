@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:modelo_para_ganar/configuration/configuration.dart';
+import 'package:modelo_para_ganar/domain/domain.dart';
 import 'package:modelo_para_ganar/presentation/presentation.dart';
 
 class SummaryTabSummaryCirclesSliderDataView extends StatelessWidget {
   const SummaryTabSummaryCirclesSliderDataView({
     super.key,
+    required this.listKIPs,
+    required this.filterValue,
   });
+
+  final List<KipDataEntity> listKIPs;
+  final String filterValue;
 
   @override
   Widget build(BuildContext context) {
@@ -26,31 +32,61 @@ class SummaryTabSummaryCirclesSliderDataView extends StatelessWidget {
         return
             // Base
             Container(
+          height: baseHeight,
+          width: baseWidth,
           alignment: Alignment.center,
           color: Colors.red.withOpacity(0),
           // Base esquinas redondeadas
           child: Container(
-            width: baseWidth,
-            height: baseHeight,
-            decoration: BoxDecoration(
-                // Color
-                color: AppColors.second,
-                // Borde
-                border: Border.all(
-                    color: AppColors.first.withOpacity(0.6),
-                    width: baseHeight * 0.015),
-                // Bordes redondeados
-                borderRadius: BorderRadius.all(Radius.circular(height * 0.1)),
-                // Sombra
-                boxShadow: [
-                  BoxShadow(
-                      color: AppColors.first.withOpacity(0.5),
-                      blurRadius: baseHeight * 0.02,
-                      spreadRadius: baseHeight * 0.003)
-                ]),
-            child:
-                // Items
-                Row(
+              alignment: Alignment.center,
+              width: baseWidth,
+              height: baseHeight,
+              decoration: BoxDecoration(
+                  // Color
+                  color: AppColors.second,
+                  // Borde
+                  border: Border.all(
+                      color: AppColors.first.withOpacity(0.6),
+                      width: baseHeight * 0.015),
+                  // Bordes redondeados
+                  borderRadius: BorderRadius.all(Radius.circular(height * 0.1)),
+                  // Sombra
+                  boxShadow: [
+                    BoxShadow(
+                        color: AppColors.first.withOpacity(0.5),
+                        blurRadius: baseHeight * 0.02,
+                        spreadRadius: baseHeight * 0.003)
+                  ]),
+              child:
+                  // Items
+                  ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: listKIPs.length,
+                itemBuilder: (BuildContext context, int index) {
+                  final current = listKIPs[index];
+                  final name = parseName(listKIPs[index].name);
+                  final colors = randomColorsCircleSlider();
+                  var percentage = 0.0;
+                  // Cartones
+                  if (filterValue == '1') {
+                    percentage = current.getPercentageCartones();
+                  }
+                  // Hectolitros
+                  if (filterValue == '2') {
+                    percentage = current.getPercentageHectolitros();
+                  }
+                  return SummaryTabSummaryCircularSliderPercentageWidget(
+                    height: baseHeightCirSlid,
+                    width: baseWidthCirSlid,
+                    percentage: percentage,
+                    trackColor: AppColors.tenth,
+                    progressBarColor1: colors.$1,
+                    progressBarColor2: colors.$2,
+                    title: name,
+                  );
+                },
+              )
+              /*Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 //! Widget - Arco Slider - Volumen
@@ -94,8 +130,8 @@ class SummaryTabSummaryCirclesSliderDataView extends StatelessWidget {
                   title: 'Marketplace',
                 ),
               ],
-            ),
-          ),
+            ),*/
+              ),
         );
       },
     ));

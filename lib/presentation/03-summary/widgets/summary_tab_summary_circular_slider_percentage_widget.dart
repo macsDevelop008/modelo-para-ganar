@@ -23,11 +23,14 @@ class SummaryTabSummaryCircularSliderPercentageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.center,
+      padding: EdgeInsets.only(top: height * 0.08),
       color: Colors.orange.withOpacity(0),
       width: width,
       height: height,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           //! Slider circular con texto porcentaje
           _circularSliderPercentage(),
@@ -35,8 +38,9 @@ class SummaryTabSummaryCircularSliderPercentageWidget extends StatelessWidget {
           //! Titulo inferior
           Expanded(
             child: Container(
+              color: Colors.red.withOpacity(0),
               margin: EdgeInsets.only(top: height * 0.03),
-              alignment: Alignment.topCenter,
+              alignment: Alignment.center,
               child: Text(
                 title,
                 maxLines: 2,

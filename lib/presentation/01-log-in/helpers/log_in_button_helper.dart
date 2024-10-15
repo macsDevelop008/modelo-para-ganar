@@ -4,6 +4,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:logger/logger.dart';
 import 'package:modelo_para_ganar/configuration/configuration.dart';
 import 'package:modelo_para_ganar/infrastructure/infrastructure.dart';
 import 'package:modelo_para_ganar/presentation/presentation.dart';
@@ -112,6 +113,10 @@ Future<void> _permissionExecute() async {
       await Permission.notification.isPermanentlyDenied;
 
   if (permissionDenied || permissionPermanentlyDenied) {
+    Logger().i(
+        'La app NO tiene permisos para notitificaciones push, se solicitan.');
     Permission.notification.request();
+  } else {
+    Logger().i('La app ya tiene permiso para notitificaciones push');
   }
 }

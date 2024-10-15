@@ -1,3 +1,5 @@
+export 'package:modelo_para_ganar/configuration/providers/riverpod/summary/tab-summary/riverpod_filter_summary_tab_summary_provider.dart';
+
 export 'package:modelo_para_ganar/configuration/providers/riverpod/log-in/riverpod_log_in_privacy_notice_provider.dart';
 
 export 'package:modelo_para_ganar/configuration/providers/riverpod/log-in/riverpod_log_in_term_conditions_provider.dart';

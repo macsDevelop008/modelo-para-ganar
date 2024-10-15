@@ -8,10 +8,12 @@ class SummaryTabSummaryDropwdownListView extends StatelessWidget {
       required this.height,
       required this.width,
       required this.data,
-      required this.event});
+      required this.event,
+      required this.initialValue});
 
   final double height;
   final double width;
+  final String initialValue;
   final Map<String, String> data;
   final Function(String?) event;
 
@@ -45,6 +47,7 @@ class SummaryTabSummaryDropwdownListView extends StatelessWidget {
             width: widthSliderBase,
             data: data,
             event: event,
+            initialValue: initialValue,
           ),
         ],
       ),
