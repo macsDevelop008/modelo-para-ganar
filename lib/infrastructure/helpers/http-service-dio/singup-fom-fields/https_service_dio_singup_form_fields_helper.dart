@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:logger/web.dart';
+import 'package:logger/logger.dart';
 import 'package:modelo_para_ganar/configuration/configuration.dart';
 import 'package:modelo_para_ganar/domain/domain.dart';
 import 'package:modelo_para_ganar/infrastructure/infrastructure.dart';

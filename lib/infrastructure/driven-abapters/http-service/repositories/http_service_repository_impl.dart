@@ -20,4 +20,9 @@ class HttpServiceRepositoryImpl implements HttpServiceRepository {
       List<FormFieldParticipantEntity> data) async {
     return await datasource.createParticipant(data);
   }
+
+  @override
+  Future<(bool, List<KipDataEntity>?)> listKPIsByIdentificationUser() async {
+    return await datasource.listKPIsByIdentificationUser();
+  }
 }

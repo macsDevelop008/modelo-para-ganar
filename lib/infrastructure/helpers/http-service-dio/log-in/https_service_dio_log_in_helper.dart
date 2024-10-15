@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:logger/web.dart';
+import 'package:logger/logger.dart';
 import 'package:modelo_para_ganar/configuration/constants/environment/environment_variables.dart';
 import 'package:modelo_para_ganar/infrastructure/infrastructure.dart';
 import 'package:shared_preferences/shared_preferences.dart';

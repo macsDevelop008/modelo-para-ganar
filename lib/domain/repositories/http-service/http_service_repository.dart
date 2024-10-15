@@ -22,4 +22,10 @@ abstract class HttpServiceRepository {
   /// [return] String = codigo de respuesta
   Future<(bool, String)> createParticipant(
       List<FormFieldParticipantEntity> data);
+
+  //! Realizar pet. de los KIPs del usuario específico
+  /// [parameter] idenUser, identificador del usuario
+  /// [return] bool = Si efectuó la lógica si errores
+  /// [return] List<KipDataEntity> = listado de KIPs filtrados si tienen al menos meta
+  Future<(bool, List<KipDataEntity>?)> listKPIsByIdentificationUser();
 }

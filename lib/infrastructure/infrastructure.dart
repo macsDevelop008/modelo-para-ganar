@@ -1,3 +1,5 @@
+export 'package:modelo_para_ganar/infrastructure/helpers/http-service-dio/kips/http_service_dio_list_kips_id_user_helper.dart';
+
 export 'package:modelo_para_ganar/infrastructure/helpers/http-service-dio/create-participant/http_service_dio_create_participant_helper.dart';
 
 export 'package:modelo_para_ganar/infrastructure/helpers/http-service-dio/log-in/https_service_dio_log_in_helper.dart';

@@ -101,7 +101,7 @@ class __DropDownButtonFilterState extends State<_DropDownButtonFilter> {
                         overflow: TextOverflow.ellipsis,
                         fontFamily: 'NotoSans',
                         fontWeight: FontWeight.w400,
-                        fontSize: widget.height * 0.5)));
+                        fontSize: widget.height * 0.6)));
           }).toList(),
           onChanged: (newValue) {
             widget.event(newValue);

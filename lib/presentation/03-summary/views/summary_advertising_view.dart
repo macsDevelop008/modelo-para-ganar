@@ -13,13 +13,17 @@ class SummaryAdvertisingView extends StatelessWidget {
     return Container(
       color: Colors.red.withOpacity(0),
       width: width,
-      height: height * 0.25,
+      height: height * 0.28,
       child:
           //! Imagen
-          SummaryAdvertisingImageWidget(
-        height: height * 0.01,
-        width: width * 0.01,
-        pathImg: 'assets/images/banner_home.png',
+
+          Container(
+        padding: EdgeInsets.symmetric(vertical: height * 0.02),
+        child: SummaryAdvertisingImageWidget(
+          height: height * 0.01,
+          width: width * 0.01,
+          pathImg: 'assets/images/banner_home.png',
+        ),
       ),
     );
   }

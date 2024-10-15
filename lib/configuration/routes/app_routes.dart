@@ -2,7 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'package:modelo_para_ganar/presentation/presentation.dart';
 
 final appRouter = GoRouter(
-  initialLocation: '/${SummaryTabSummayScreen.name}',
+  initialLocation: '/${LogInScreen.name}',
   routes: [
     //! LogIn
     GoRoute(

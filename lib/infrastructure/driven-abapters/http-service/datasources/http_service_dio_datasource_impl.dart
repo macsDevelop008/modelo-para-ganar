@@ -10,6 +10,8 @@ class HttpServiceDioDatasourceImpl implements HttpServiceDatasource {
   final String singupFormFieldsEndPoint = 'v1/forms/signup/info';
   // Crear participante
   final String createParticipantEndPoint = 'v1/participants';
+  // Obtener data de los KPIs
+  final String kipsInformation = 'v1/entries/index';
 
   @override
   Future<(bool, String)> logIn(String user, String password) async {
@@ -44,6 +46,17 @@ class HttpServiceDioDatasourceImpl implements HttpServiceDatasource {
     } catch (e) {
       Logger().e(e);
       return (false, '');
+    }
+  }
+
+  @override
+  Future<(bool, List<KipDataEntity>?)> listKPIsByIdentificationUser() async {
+    try {
+      return await HttpServiceDioListKipsIdUserHelper()
+          .listKPIsByIdentificationUser(kipsInformation);
+    } catch (e) {
+      Logger().e(e);
+      return (false, null);
     }
   }
 }

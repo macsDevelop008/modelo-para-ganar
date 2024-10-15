@@ -31,15 +31,23 @@ class SummaryTabSummaryCircularSliderPercentageWidget extends StatelessWidget {
         children: [
           //! Slider circular con texto porcentaje
           _circularSliderPercentage(),
+
           //! Titulo inferior
-          Text(
-            title,
-            maxLines: 2,
-            style: TextStyle(
-                color: AppColors.seventh,
-                fontFamily: 'NotoSans',
-                fontSize: height * 0.14,
-                fontWeight: FontWeight.w700),
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.only(top: height * 0.03),
+              alignment: Alignment.topCenter,
+              child: Text(
+                title,
+                maxLines: 2,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: AppColors.seventh,
+                    fontFamily: 'NotoSans',
+                    fontSize: height * 0.11,
+                    fontWeight: FontWeight.w700),
+              ),
+            ),
           )
         ],
       ),

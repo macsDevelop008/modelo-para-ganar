@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 import 'package:modelo_para_ganar/configuration/configuration.dart';
 import 'package:modelo_para_ganar/infrastructure/infrastructure.dart';
 import 'package:modelo_para_ganar/presentation/presentation.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 /// Evento del botón de inicio de sesión
 btnEventLogIn(
@@ -50,6 +51,8 @@ btnEventLogIn(
             closeModal(context);
             // Si el Login fue exitoso
             if (serviceLogIn.$1) {
+              // Ejecutar permiso para notificaciones push
+              await _permissionExecute();
               // Pasar a la pagina del resumen
               context.go('/${SummaryTabSummayScreen.name}');
             } else {
@@ -99,5 +102,16 @@ btnEventLogIn(
     // Modal indicando que no tiene internet
     showErrorModal(
         context, 'El dispositivo no tiene acceso a internet.', () {}, null);
+  }
+}
+
+/// Ejecutar la solicitud del permiso para las notificaciones push
+Future<void> _permissionExecute() async {
+  final permissionDenied = await Permission.notification.isDenied;
+  final permissionPermanentlyDenied =
+      await Permission.notification.isPermanentlyDenied;
+
+  if (permissionDenied || permissionPermanentlyDenied) {
+    Permission.notification.request();
   }
 }

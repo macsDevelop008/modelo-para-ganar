@@ -18,4 +18,12 @@ class EnvironmentVariables {
 
   static final String campaign =
       dotenv.get('COMPAIGN', fallback: 'not found enviroment-variable');
+
+  static final String pushNotificationPermissions = dotenv.get(
+      'STORAGE_KEY_PUSH_NOTIFICATION_PERMISSIONS',
+      fallback: 'not found enviroment-variable');
+
+  static final String userIdentification = dotenv.get(
+      'STORAGE_KEY_USER_IDENTIFICATION',
+      fallback: 'not found enviroment-variable');
 }

@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:modelo_para_ganar/configuration/configuration.dart';
 import 'package:modelo_para_ganar/presentation/presentation.dart';
@@ -25,11 +28,11 @@ class SummaryTabSummayScreen extends StatelessWidget {
           final width = constraints.maxWidth;
 
           // Tamaños cuadrado redondeado
-          final heightRoundedSquare = height * 0.85;
+          final heightRoundedSquare = height * 0.9;
           final widthRoundedSquare = width * 0.95;
 
           return
-              // Espacio
+              // Espacio base
               Container(
                   margin: EdgeInsets.only(top: height * 0.04),
                   alignment: Alignment.topCenter,
@@ -49,38 +52,65 @@ class SummaryTabSummayScreen extends StatelessWidget {
                             BorderRadius.all(Radius.circular(width * 0.07)),
                         border: Border.all(
                             color: AppColors.tenth.withOpacity(0.6))),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        //! Titulo, Subtitulo e instrucciones
-                        SummaryTabSummaryTitleSubTitleView(
-                          height: heightRoundedSquare,
-                          width: widthRoundedSquare,
-                          title: 'Metas por volumen',
-                          subTitle:
-                              'Estas son las principales metas por volumen que debes cumplir al mes.',
-                          instructions:
-                              'A medida que avanzas en cada uno, vas sumando el porcentaje de cumplimiento total para obtener tu bonificación.',
-                        ),
-                        //! Slider progreso
-                        SummaryTabSummarySliderView(
-                            height: heightRoundedSquare,
-                            width: widthRoundedSquare,
-                            percentageValue: 30),
-                        //! Filtro - dropDownList
-                        SummaryTabSummaryDropwdownListView(
-                          height: heightRoundedSquare * 0.08,
-                          width: widthRoundedSquare,
-                          data: {
-                            '1': 'Cartones 1',
-                            '2': 'Cartones 2',
-                            '3': 'Cartones 3'
-                          },
-                          event: (String? value) {},
-                        ),
-                        //! Estadisticas - arcos y %
-                        SummaryTabSummaryCirclesSliderDataView(),
-                      ],
+                    child: FutureBuilder(
+                      future: listKips(),
+                      builder: (BuildContext context,
+                          AsyncSnapshot<dynamic> snapshot) {
+                        // Si está cargando la información
+                        if (snapshot.connectionState ==
+                            ConnectionState.waiting) {
+                          return Center(
+                            child: Platform.isIOS
+                                ? CupertinoActivityIndicator(
+                                    color: AppColors.seventh,
+                                  )
+                                : CircularProgressIndicator(
+                                    color: AppColors.seventh,
+                                  ),
+                          );
+                        }
+                        // Si se generó un error en la carga
+                        else if (snapshot.hasError) {
+                          return Text(snapshot.error!.toString());
+                        }
+                        // Si no, carga satisfactória
+                        else {
+                          return Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              //! Titulo, Subtitulo e instrucciones
+                              SummaryTabSummaryTitleSubTitleView(
+                                height: heightRoundedSquare,
+                                width: widthRoundedSquare,
+                                title: 'Metas por volumen',
+                                subTitle:
+                                    'Estas son las principales metas por volumen que debes cumplir al mes.',
+                                instructions:
+                                    'A medida que avanzas en cada uno, vas sumando el porcentaje de cumplimiento total para obtener tu bonificación.',
+                              ),
+                              //! Slider progreso
+                              SummaryTabSummarySliderView(
+                                  height: heightRoundedSquare,
+                                  width: widthRoundedSquare,
+                                  percentageValue: 30),
+                              //! Filtro - dropDownList
+                              SummaryTabSummaryDropwdownListView(
+                                height: heightRoundedSquare * 0.08,
+                                width: widthRoundedSquare,
+                                data: const {
+                                  '1': 'Cartones',
+                                  '2': 'Hectolitros',
+                                },
+                                event: (String? value) {
+                                  print(value);
+                                },
+                              ),
+                              //! Estadisticas - arcos y %
+                              const SummaryTabSummaryCirclesSliderDataView(),
+                            ],
+                          );
+                        }
+                      },
                     ),
                   ));
         },

@@ -71,7 +71,7 @@ class SummaryTabSummaryCirclesSliderDataView extends StatelessWidget {
                   trackColor: AppColors.tenth,
                   progressBarColor1: AppColors.cirlceSlider2,
                   progressBarColor2: AppColors.cirlceSliderS2,
-                  title: 'Vólumen',
+                  title: 'Vólumen Retomable',
                 ),
                 //! Widget - Arco Slider - Above + Beyond
                 SummaryTabSummaryCircularSliderPercentageWidget(
@@ -81,7 +81,7 @@ class SummaryTabSummaryCirclesSliderDataView extends StatelessWidget {
                   trackColor: AppColors.tenth,
                   progressBarColor1: AppColors.cirlceSlider3,
                   progressBarColor2: AppColors.cirlceSliderS3,
-                  title: 'Vólumen',
+                  title: 'Above Core + Beyond Beer',
                 ),
                 //! Widget - Arco Slider - Maketplace
                 SummaryTabSummaryCircularSliderPercentageWidget(
@@ -91,7 +91,7 @@ class SummaryTabSummaryCirclesSliderDataView extends StatelessWidget {
                   trackColor: AppColors.tenth,
                   progressBarColor1: AppColors.cirlceSlider4,
                   progressBarColor2: AppColors.cirlceSliderS4,
-                  title: 'Vólumen',
+                  title: 'Marketplace',
                 ),
               ],
             ),
