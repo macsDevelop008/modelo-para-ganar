@@ -12,7 +12,7 @@ class HttpServiceDioListKipsIdUserHelper {
     // Instancia Dio
     final dio = SingletonHttpsServiceDioHelper.getInstance().dio;
 
-    // Instancia shared preferences.
+    // Instancia shared preferences
     final SharedPreferences prefs = await SharedPreferences.getInstance();
 
     final userIdentification =

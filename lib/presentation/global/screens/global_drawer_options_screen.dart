@@ -73,7 +73,9 @@ class GlobalDrawerOptionsScreen extends StatelessWidget {
           SizedBox(
               width: width * 0.8,
               child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    logOut(context);
+                  },
                   child: Text(
                     'Cerrar Sesión',
                     textAlign: TextAlign.center,

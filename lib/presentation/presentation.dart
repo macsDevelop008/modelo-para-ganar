@@ -1,5 +1,6 @@
 //! Global
 
+export 'package:modelo_para_ganar/presentation/global/helpers/global_log_out_helper.dart';
 export 'package:modelo_para_ganar/presentation/global/helpers/global_show_create_participant_helper.dart';
 export 'package:modelo_para_ganar/presentation/global/helpers/global_show_modal_dialog_helper.dart';
 export 'package:modelo_para_ganar/presentation/global/screens/global_drawer_options_screen.dart';
@@ -9,6 +10,7 @@ export 'package:modelo_para_ganar/presentation/global/widgets/global_linear_colo
 export 'package:modelo_para_ganar/presentation/global/screens/global_create_participant_screen.dart';
 
 //! 01-LogIn
+
 export 'package:modelo_para_ganar/presentation/01-log-in/screens/log_in_screen.dart';
 export 'package:modelo_para_ganar/presentation/01-log-in/views/log_in_logo_title_view.dart';
 export 'package:modelo_para_ganar/presentation/01-log-in/widgets/log_in_logo_widget.dart';

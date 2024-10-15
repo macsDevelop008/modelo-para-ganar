@@ -9,6 +9,7 @@ import 'package:modelo_para_ganar/configuration/configuration.dart';
 import 'package:modelo_para_ganar/infrastructure/infrastructure.dart';
 import 'package:modelo_para_ganar/presentation/presentation.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 /// Evento del botón de inicio de sesión
 btnEventLogIn(
@@ -22,6 +23,9 @@ btnEventLogIn(
 
   // Delay UX
   await Future.delayed(const Duration(milliseconds: 500));
+
+  // Instancia shared preferences
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
 
   // Obtiene el valor de los terminos y condiciones del provider
   final acceptTermnsConditions = ref.read(riverpodLogInTermConditionsProvider);
@@ -54,6 +58,12 @@ btnEventLogIn(
             if (serviceLogIn.$1) {
               // Ejecutar permiso para notificaciones push
               await _permissionExecute();
+              // Almacenar usuario identificacion
+              prefs.setString(
+                  EnvironmentVariables.userIdentification, user.text);
+              // Almacenar token
+              prefs.setString(
+                  EnvironmentVariables.storageKeyToken, serviceLogIn.$2);
               // Pasar a la pagina del resumen
               context.go('/${SummaryTabSummayScreen.name}');
             } else {
