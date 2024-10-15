@@ -71,7 +71,7 @@ class LogInButtonsHelpView extends StatelessWidget {
                   textColor: AppColors.seventh,
                   borderColor: AppColors.tenth,
                   event: () {
-                    print('evento');
+                    showInformationModal(context, 'En construcción...');
                   },
                   textSize: height * 0.08,
                 ),

@@ -7,11 +7,15 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class HttpsServiceDioLogInHelper {
   Future<(bool, String)> logIn(
-      String endPoint, String user, String password) async {
+    String endPoint,
+    String user,
+    String password,
+  ) async {
     // Instancia Dio
     final dio = SingletonHttpsServiceDioHelper.getInstance().dio;
 
-    // Instancia shared preferences.
+    // Instancia shared preferences si no es para test unitario
+
     final SharedPreferences prefs = await SharedPreferences.getInstance();
 
     // Cuerpo peticion

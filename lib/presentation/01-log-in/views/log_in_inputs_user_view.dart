@@ -52,7 +52,7 @@ class LogInInputsUserView extends StatelessWidget {
           LogInEventTextRecoverWidget(
             text: '¿Olvidaste tu contraseña?',
             event: () {
-              print('Evento olvidado contraseña');
+              showInformationModal(context, 'En construcción...');
             },
             height: height,
             width: width * 0.85,

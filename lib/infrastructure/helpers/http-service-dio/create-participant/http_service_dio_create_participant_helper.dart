@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:logger/web.dart';
-import 'package:modelo_para_ganar/configuration/constants/environment/environment_variables.dart';
+import 'package:modelo_para_ganar/configuration/configuration.dart';
 import 'package:modelo_para_ganar/domain/domain.dart';
 import 'package:modelo_para_ganar/infrastructure/infrastructure.dart';
 

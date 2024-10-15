@@ -33,7 +33,7 @@ class LogInTermsConditionsView extends StatelessWidget {
                 text: 'He leído y acepto ',
                 textEvent: 'Términos y Condiciones',
                 eventText: () {
-                  print('envento terminos y condiciones');
+                  showInformationModal(context, 'En construcción...');
                 },
                 eventCheckBox: (value) {
                   print(value);
@@ -53,7 +53,7 @@ class LogInTermsConditionsView extends StatelessWidget {
                 text: 'He leído y acepto el ',
                 textEvent: 'Aviso de privacidad',
                 eventText: () {
-                  print('envento terminos y condiciones');
+                  showInformationModal(context, 'En construcción...');
                 },
                 eventCheckBox: (value) {
                   ref
