@@ -47,6 +47,14 @@ Tener en cuenta que, para poder ejecutar la aplicación en iOS se debe contar co
 ```bash
   flutter run -d emulator-4444
 ```
+
+**Pruebas Unitarias**
+
+También se implementaron pruebas unitarias para testear la lógica de la capa de infraestructura. Estas pruebas se encuentran en la carpeta "test" del proyecto. Para ejecutar estas pruebas y verificar el correcto funcionamiento, ejecute el siguiente comando:
+```bash
+  flutter test
+```
+
 ## Ejecutables 
 
 En los siguientes enlaces podrá descargar los ejecutables para Android (.apk) y para iOS (.ipa) para ver la aplicación en un dispositivo móvil. Dentro de la app, en el LogIn se dejaron por defecto la **cuenta y contraseña** en los inputs de texto.
