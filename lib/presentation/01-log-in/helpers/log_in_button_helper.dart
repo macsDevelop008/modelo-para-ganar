@@ -36,7 +36,6 @@ btnEventLogIn(
       await (Connectivity().checkConnectivity());
 
   // Verificar conexion a internet
-  //TODO: Hacer un ping para completar verificacion acceso a la red
   if (connectivityResult.contains(ConnectivityResult.mobile) ||
       connectivityResult.contains(ConnectivityResult.wifi)) {
     // Verificar que usuario no esté vacio
