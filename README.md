@@ -4,6 +4,8 @@ Este proyecto es una prueba técnica administrada por SuperLikers para evaluar l
 
 La aplicación fue desarrollada utilizando Flutter en su versión 3.24.0 y está diseñada para funcionar en dispositivos iOS y Android.
 
+**Video de la App (Android e iOS)**
+[Video del Funcionamiento](https://www.mediafire.com/file/pxk8kjd0lqt17a0/test-app-superlikers.mp4/file)
 
 ## Requisitos
 
